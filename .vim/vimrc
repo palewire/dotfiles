@@ -43,10 +43,10 @@ set hidden
 filetype plugin indent on
 syntax on
 
-# Some space at the bottom for my byobu status bar under the vim bar
+" Some space at the bottom for my byobu status bar under the vim bar
 set laststatus=2
 
-# Dark variation on seoul256 theme
+" Dark variation on seoul256 theme
 let g:seoul256_background = 233
 colo seoul256
 
