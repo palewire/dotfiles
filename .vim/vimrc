@@ -9,11 +9,16 @@ Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
+" Show line numbers
 set number
+
 set linebreak
+
+" Make line wrapping obvious but not automatic
 set showbreak=+++
 set textwidth=0
 set wrapmargin=0
+
 set colorcolumn=121
 set showmatch
 set visualbell
