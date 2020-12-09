@@ -28,6 +28,7 @@ set smartcase
 set ignorecase
 set incsearch
 
+" Python-ish identation stuff by default
 set autoindent
 set expandtab
 set shiftwidth=4
