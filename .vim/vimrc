@@ -50,4 +50,5 @@ set laststatus=2
 let g:seoul256_background = 233
 colo seoul256
 
+# Customize the hotkey to open NerdTree
 map <C-a> :NERDTreeToggle<CR>
