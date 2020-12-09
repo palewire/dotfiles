@@ -1,0 +1,53 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/seoul256.vim'
+
+call plug#end()
+
+set number
+set linebreak
+set showbreak=+++
+set textwidth=0
+set wrapmargin=0
+set colorcolumn=121
+set showmatch
+set visualbell
+
+set hlsearch
+set smartcase
+set ignorecase
+set incsearch
+
+set autoindent
+set expandtab
+set shiftwidth=4
+set smartindent
+set smarttab
+set tabstop=4
+set softtabstop=4
+
+set listchars=eol:¬,tab:␉·,trail:␠,extends:>,precedes:<,space:‧
+set list
+
+set ruler
+set undolevels=1000
+set backspace=indent,eol,start
+
+set hidden
+
+filetype plugin indent on
+syntax on
+
+# Some space at the bottom for my byobu status bar under the vim bar
+set laststatus=2
+
+# Dark variation on seoul256 theme
+let g:seoul256_background = 233
+colo seoul256
+
+map <C-a> :NERDTreeToggle<CR>
