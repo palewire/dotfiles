@@ -1,17 +1,22 @@
-call plug#begin('~/.vim/plugged')
-
+all plug#begin('~/.vim/plugged')                                                              
+                                               
 Plug 'preservim/nerdtree'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'itchyny/lightline.vim'
+Plug 'timakro/vim-copytoggle'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/seoul256.vim'
-
+                                               
 call plug#end()
+                                               
+" Enable use of the mouse for all modes                                                        
+set mouse=a
 
 " Show line numbers
-set number
-
+set number         
+                                               
+" Only add linebreaks when I explictly hit Enter
 set linebreak
 
 " Make line wrapping obvious but not automatic
@@ -19,16 +24,25 @@ set showbreak=+++
 set textwidth=0
 set wrapmargin=0
 
-set colorcolumn=121
-set showmatch
+" Line width warning bar on the right
+set colorcolumn=121  
 set visualbell
-
-set hlsearch
-set smartcase
+                                               
+" Cursor briefly jumps to matching brace when you insert one
+set showmatch
+                                               
+" Highlight all search matches
+set hlsearch                 
+                                               
+" Use case insensitive search, except when using capital letters
+set smartcase                                                                                  
 set ignorecase
-set incsearch
+set incsearch                
 
-" Python-ish identation stuff by default
+" Instead of failing a command because of unsaved changes, instead raise a                                                                                                            [0/1037]
+" dialogue asking if you wish to save changed files.
+set confirm
+
 set autoindent
 set expandtab
 set shiftwidth=4
@@ -37,8 +51,8 @@ set smarttab
 set tabstop=4
 set softtabstop=4
 
-" Custom characters to show whitespace, tabs and other stuff
-set listchars=eol:¬,tab:⇥,trail:‧,extends:>,precedes:<,space:‧
+" Whitespace-ish characters
+set listchars=eol:¬,tab:⇥·,trail:␠,extends:>,precedes:<,space:‧
 set list
 
 set ruler
@@ -50,12 +64,19 @@ set hidden
 filetype plugin indent on
 syntax on
 
-" Some space at the bottom for my byobu status bar under the vim bar
 set laststatus=2
 
-" Dark variation on seoul256 theme
+" Hotkey for paste mode
+set pastetoggle=<C-p>
+
 let g:seoul256_background = 233
 colo seoul256
 
-# Customize the hotkey to open NerdTree
+let NERDTreeShowHidden=1
+
 map <C-a> :NERDTreeToggle<CR>
+nmap <C-c> <Plug>copytoggle
+
+" Map <C-L> (redraw screen) to also turn off search highlighting until the
+" next search
+nnoremap <C-L> :nohl<CR><C-L>
