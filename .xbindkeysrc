@@ -9,6 +9,3 @@ Caps_Lock
 
 "nautilus"
 Menu
-
-"sleep 0.2 && xdotool key Super_L+e"
-F8
