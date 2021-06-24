@@ -1,0 +1,14 @@
+"gnome-calculator"
+Scroll_Lock
+
+"gnome-terminal"
+Super_R
+
+"brave-browser duckduckgo.com"
+Caps_Lock
+
+"nautilus"
+Menu
+
+"sleep 0.2 && xdotool key Super_L+e"
+F8
