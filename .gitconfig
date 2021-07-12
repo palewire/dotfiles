@@ -1,0 +1,25 @@
+[user]
+        email = b@palewi.re 
+        name = palewire
+        signingkey = A5AD4A9AD42D69AB
+[alias]
+        ci = commit -am
+        co = checkout
+        st = status
+        po = pull origin
+        p  = push
+        a  = add
+[core]
+        editor = vim
+[commit]
+        gpgsign = true
+[gpg]
+        program = gpg
+[pack]
+        windowMemory = 32m
+[hub]
+        protocol = https
+[init]
+        defaultBranch = main
+[pull]
+        rebase = false
