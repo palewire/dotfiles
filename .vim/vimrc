@@ -1,5 +1,5 @@
-all plug#begin('~/.vim/plugged')                                                              
-                                               
+call plug#begin("~/.vim/autoload")
+
 Plug 'preservim/nerdtree'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'itchyny/lightline.vim'
@@ -7,15 +7,15 @@ Plug 'timakro/vim-copytoggle'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/seoul256.vim'
-                                               
+
 call plug#end()
-                                               
-" Enable use of the mouse for all modes                                                        
+
+" Enable use of the mouse for all modes
 set mouse=a
 
 " Show line numbers
-set number         
-                                               
+set number
+
 " Only add linebreaks when I explictly hit Enter
 set linebreak
 
@@ -27,19 +27,19 @@ set wrapmargin=0
 " Line width warning bar on the right
 set colorcolumn=121  
 set visualbell
-                                               
+
 " Cursor briefly jumps to matching brace when you insert one
 set showmatch
-                                               
-" Highlight all search matches
-set hlsearch                 
-                                               
-" Use case insensitive search, except when using capital letters
-set smartcase                                                                                  
-set ignorecase
-set incsearch                
 
-" Instead of failing a command because of unsaved changes, instead raise a                                                                                                            [0/1037]
+" Highlight all search matches
+set hlsearch
+
+" Use case insensitive search, except when using capital letters
+set smartcase
+set ignorecase
+set incsearch
+
+" Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
 set confirm
 
